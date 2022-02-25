@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #înclude "stdlib.h"
-#include "graphe.h"
+
 
 typedef struct ELEMENT_TAS 
 {
