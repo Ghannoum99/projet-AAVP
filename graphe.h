@@ -28,6 +28,8 @@ typedef struct GRAPHE
 }GRAPHE;
 
 
+typedef struct ETAT;
+
 /* LES OPERATIONS ELEMENTAIRES POUR MANIPULER UN GRAPHE */
 GRAPHE creer_graphe(int nombre_noeuds);
 void ajouter_arc(GRAPHE* graphe, int sommet_src, int sommet_dest, double poids);
