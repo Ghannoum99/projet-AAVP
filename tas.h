@@ -17,7 +17,7 @@ typedef struct TAS
 	int nombre_elements;
 }TAS;
 
-/* LES OPERATIONS ELEMENTAIRES D'UN TAS */
+/* LES OPERATIONS ELEMENTAIRES POUR MANIPULER UN TAS */
 void ajouter_element_tas(TAS* tas, ELEMENT_TAS element);
 void supprimer_element_tas(TAS* tas, int a);
 void mise_a_jour_tas(TAS* tas, ELEMENT_TAS element);
