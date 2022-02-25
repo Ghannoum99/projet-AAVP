@@ -50,8 +50,31 @@ int tas_est_vide(TAS* tas)
 
 ELEMENT_TAS extraire_min_tas(TAS* tas)
 {
+	float dist_min = tas->elements[0].distance;
+	int indice_min = -1;
+	ELEMENT_TAS element, element_min;
 	
+	for (int i = 0; i < tas->nombre_elements; i++)
+	{
+		element = tas->elements[i];
+		if (dist_min >= element.distance)
+		{
+			element_min = element;
+			indice_min = i;
+			dist_min = element.distance;
+		}
+	}
+	/* si l'indice est toujours négatif --> Tas est vide */
+	if (indice_min == -1)
+	{
+		fprintf(stderr, "tas est vide\n");
+		return;
+	}
+	
+	supprimer_element_tas(tas, indice_min);
+	 
 }
+
 void desallouer_tas(TAS* tas)
 {
 	free(tas->elements);
