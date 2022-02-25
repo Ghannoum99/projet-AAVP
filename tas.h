@@ -7,14 +7,16 @@
 
 typedef struct ELEMENT_TAS 
 {
-	int u;
+	int noeud;
 	double distance;
+	
 }ELEMENT_TAS;
 
 typedef struct TAS
 {
 	ELEMENT_TAS* elements;
 	int nombre_elements;
+	
 }TAS;
 
 /* LES OPERATIONS ELEMENTAIRES POUR MANIPULER UN TAS */
