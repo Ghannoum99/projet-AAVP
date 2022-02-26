@@ -45,9 +45,3 @@ int* get_noeuds(GRAPHE* graphe)
 	return noeuds;
 }
 
-//void parcours_en_profondeur(GRAPHE* *graphe, int *d; int* pi, associative_array_t *f, int const *noeuds);
-bool est_connexe(GRAPHE* graphe);
-GRAPHE* graphe_inverse(GRAPHE* graphe);
-void afficher_noeud(GRAPHE* graphe, int n);
-void afficher_graphe(GRAPHE* graphe);
-void desallouer_graphe(GRAPHE* graphe);
