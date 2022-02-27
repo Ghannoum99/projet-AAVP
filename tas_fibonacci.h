@@ -12,10 +12,10 @@ typedef struct ELEMENT_TAS_FIBONACCI
 	struct ELEMENT_TAS_FIBONACCI * droite;
 	struct ELEMENT_TAS_FIBONACCI * gauche;
 	
-	/*
+	
 	 int from;
 	 int to;
-	 */
+	 
 	 
 }ELEMENT_TAS_FIBONACCI;
 

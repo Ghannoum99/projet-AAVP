@@ -93,6 +93,8 @@ ELEMENT_TAS_FIBONACCI* nouvel_element_tas_fib(float cle, int from, int to)
 	element->degree = 0;
 	element->gauche = element;
 	element->droite = element;
+	element->from = from;
+	element->to = to;
 	
 	return element;
 	
