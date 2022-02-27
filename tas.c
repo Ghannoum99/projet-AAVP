@@ -11,11 +11,11 @@ void ajouter_element_tas(TAS* tas, ELEMENT_TAS element)
 	tas->elements[tas->nombre_elements-1] = element;
 }
 
-void supprimer_element_tas(TAS* tas, int a)
+void supprimer_element_tas(TAS* tas, int indice_elem)
 {
 	tas->nombre_elements--;
 	
-	for (int i = a; i < tas->nombre_elements; i++)
+	for (int i = indice_elem; i < tas->nombre_elements; i++)
 		tas->elements[i] = tas->elements[i+1];
 		
 	if (tas->nombre_elements != 0)

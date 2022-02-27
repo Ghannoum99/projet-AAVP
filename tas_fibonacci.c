@@ -97,6 +97,7 @@ ELEMENT_TAS_FIBONACCI* nouvel_element_tas_fib(float cle, int from, int to)
 	return element;
 	
 }
+
 /*
 void desallouer_tas_fib(TAS_FIBONACCI* tas_fib)
 {
