@@ -11,12 +11,10 @@ typedef struct ELEMENT_TAS_FIBONACCI
 	struct ELEMENT_TAS_FIBONACCI * fils;
 	struct ELEMENT_TAS_FIBONACCI * droite;
 	struct ELEMENT_TAS_FIBONACCI * gauche;
-	
-	
-	 int from;
-	 int to;
-	 
-	 
+
+	int from;
+	int to;
+	  
 }ELEMENT_TAS_FIBONACCI;
 
 typedef struct TAS_FIBONACCI
@@ -36,6 +34,7 @@ void inserer_tas_fib(TAS_FIBONACCI* tas_fib, ELEMENT_TAS_FIBONACCI* element);
 ELEMENT_TAS_FIBONACCI* extraire_min_tas_fib(TAS_FIBONACCI* tas_fib, ELEMENT_TAS_FIBONACCI* element);
 int tas_fib_est_vide(TAS_FIBONACCI* tas_fib);
 ELEMENT_TAS_FIBONACCI* nouvel_element_tas_fib(float cle, int from, int to);
+void desallouer_sous_arbre(ELEMENT_TAS_FIBONACCI* racine)
 void desallouer_tas_fib(TAS_FIBONACCI* tas_fib);
 
 #endif

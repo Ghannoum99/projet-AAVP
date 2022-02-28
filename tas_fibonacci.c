@@ -100,11 +100,9 @@ ELEMENT_TAS_FIBONACCI* nouvel_element_tas_fib(float cle, int from, int to)
 	
 }
 
-/*
-void desallouer_tas_fib(TAS_FIBONACCI* tas_fib)
-{
-	ELEMENT_TAS_FIBONACCI* racine = tas->fib->racine;
-	
+
+void desallouer_sous_arbre(ELEMENT_TAS_FIBONACCI* racine)
+{	
 	if (racine == NULL)
 		return;
 		
@@ -116,10 +114,18 @@ void desallouer_tas_fib(TAS_FIBONACCI* tas_fib)
 		while (en_cours != racine)
 		{
 			tmp = en_cours->droite;
-			
+			desallouer_sous_arbre(en_cours);
+			en_cours = tmp;
 			
 		}
-		
 	}
+	
+	desallouer_sous_arbre(racine->fils);
+	free(racine);
 }
-*/
+
+void desallouer_tas_fib(TAS_FIBONACCI* tas_fib)
+{
+	desallouer_sous_arbre(tas_fib->racine);
+	free(tas_fib);
+}
