@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-#include "tas_fibbonacci.h"
+#include "tas_fibonacci.h"
 
 
 
 TAS_FIBONACCI* creer_tas_fibonacci()
 {
 	TAS_FIBONACCI *tas_fib = malloc(sizeof(TAS_FIBONACCI));
+	
+	if (tas_fib == NULL)
+		EXIT_FAILURE;
 	
 	tas_fib->nombre_noeuds = 0;
 	tas_fib->min = NULL;
@@ -104,7 +107,7 @@ ELEMENT_TAS_FIBONACCI* nouvel_element_tas_fib(float cle, int from, int to)
 void desallouer_sous_arbre(ELEMENT_TAS_FIBONACCI* racine)
 {	
 	if (racine == NULL)
-		return;
+		EXIT_FAILURE;
 		
 	if (racine->droite != racine)
 	{

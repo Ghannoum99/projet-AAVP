@@ -27,7 +27,7 @@ void supprimer_element_tas(TAS* tas, int indice_elem)
 
 void mise_a_jour_tas(TAS* tas, ELEMENT_TAS element)
 {
-	int noeud = element.noeud
+	int noeud = element.noeud;
 	float dist = element.distance;
 	
 	for(int i = 0; i < tas->nombre_elements; i++)
@@ -35,7 +35,7 @@ void mise_a_jour_tas(TAS* tas, ELEMENT_TAS element)
 		if (tas->elements[i].noeud == noeud)
 		{
 			tas->elements[i].distance = dist;
-			return;
+			EXIT_FAILURE;
 		}
 	}
 	
@@ -68,7 +68,7 @@ ELEMENT_TAS extraire_min_tas(TAS* tas)
 	if (indice_min == -1)
 	{
 		fprintf(stderr, "tas est vide\n");
-		return;
+		EXIT_FAILURE;
 	}
 	
 	supprimer_element_tas(tas, indice_min);

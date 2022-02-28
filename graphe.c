@@ -9,6 +9,9 @@ GRAPHE creer_graphe(int nombre_noeuds)
 {
 	GRAPHE* graphe = (GRAPHE*) malloc(sizeof(GRAPHE));
 	
+	if (graphe == NULL)
+		return;
+	
 	graphe->nombre_noeuds = nombre_noeuds;
 	
 	// tableau d'une liste d'adjacence
@@ -45,3 +48,24 @@ int* get_noeuds(GRAPHE* graphe)
 	return noeuds;
 }
 
+void desallouer_graphe(GRAPHE* graphe)
+{
+	if ((graphe != NULL) && (graphe->liste_adjacence != NULL))
+	{
+		for (int i = 0; i < graphe->nombre_noeuds; i++)
+		{
+			LISTE_ADJACENCE_NOEUD* element = graphe->liste_adjacence[i].racine;
+			
+			while (element != NULL)
+			{
+				LISTE_ADJACENCE_NOEUD* tmp = element->suivant;
+				free(element);
+				element = tmp;
+			}
+		}
+		
+		free(graphe->liste_adjacence);
+		free(graphe);
+	}
+	
+}

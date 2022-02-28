@@ -2,6 +2,7 @@
 #define _GRAPHE_H_
 
 #include <stdbool.h>
+#include "etat.h"
 
 // represente les aretes entre les noeuds
 typedef struct LISTE_ADJACENCE_NOEUD 
@@ -34,11 +35,6 @@ typedef struct ETAT;
 GRAPHE creer_graphe(int nombre_noeuds);
 void ajouter_arc(GRAPHE* graphe, int sommet_src, int sommet_dest, double poids);
 int* get_noeuds(GRAPHE* graphe);
-//void parcours_en_profondeur(GRAPHE* *graphe, int *d; int* pi, associative_array_t *f, int const *noeuds);
-bool est_connexe(GRAPHE* graphe);
-GRAPHE* graphe_inverse(GRAPHE* graphe);
-void afficher_noeud(GRAPHE* graphe, int n);
-void afficher_graphe(GRAPHE* graphe);
 void desallouer_graphe(GRAPHE* graphe);
 
 
