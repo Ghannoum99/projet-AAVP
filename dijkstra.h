@@ -1,7 +1,7 @@
 #ifndef _DIJKSTRA_H_
 #define _DIJKSTRA_H
 
-#include <stdio.>
+#include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include "graphe.h"
